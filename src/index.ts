@@ -8,7 +8,7 @@ const mongodb_port = 27017
 
 mongoose.set('strictQuery', true)
 
-mongoose.connect(`mongodb://localhost:${mongodb_port}`)
+mongoose.connect(`mongodb://ec2-54-233-244-136.sa-east-1.compute.amazonaws.com:${mongodb_port}`)
   .then(() => {
     const app = express()
 
