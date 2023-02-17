@@ -2,9 +2,8 @@ import express from 'express'
 import mongoose from 'mongoose'
 import router from './routes'
 import cors from 'cors'
-import getDevGoData from './functions/getDevGoData'
 
-const port = 3001
+const port = 8080
 const mongodb_port = 27017
 
 mongoose.set('strictQuery', true)
