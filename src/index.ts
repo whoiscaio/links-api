@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 import router from './routes'
 import cors from 'cors'
 
-const port = 8080
+const port = 80
 const mongodb_port = 27017
 
 mongoose.set('strictQuery', true)
