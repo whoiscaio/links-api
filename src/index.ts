@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 import router from './routes'
 import cors from 'cors'
 
-const port = 80
+const port = 8080
 const mongodb_port = 27017
 
 mongoose.set('strictQuery', true)
@@ -13,7 +13,7 @@ mongoose.connect(`mongodb://localhost:${mongodb_port}`)
     const app = express()
 
     app.use(cors({
-      origin: 'http://localhost:3000'
+      origin: '*'
     }))
     app.use(express.json())
     app.use(router)
