@@ -8,7 +8,7 @@ const mongodb_port = 27017
 
 mongoose.set('strictQuery', true)
 
-mongoose.connect(`mongodb://ec2-54-233-244-136.sa-east-1.compute.amazonaws.com:${mongodb_port}`)
+mongoose.connect(`mongodb+srv://root:root@cluster0.rw55knl.mongodb.net/?retryWrites=true&w=majority`)
   .then(() => {
     const app = express()
 
@@ -22,4 +22,4 @@ mongoose.connect(`mongodb://ec2-54-233-244-136.sa-east-1.compute.amazonaws.com:$
       console.log(`Server started at http://localhost:${port}`)
     })
   })
-  .catch(() => console.log('connection error'))
+  .catch((err) => console.log('connection error', err))
